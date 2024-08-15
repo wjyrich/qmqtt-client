@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=QMQTT Client
 Comment=MQTT Client GUI Written with Qt 
-Icon=qmqtt-client
+Icon=qmqtt
 Type=Application
 Categories=Engineering;Development;
 Exec=qmqtt-client

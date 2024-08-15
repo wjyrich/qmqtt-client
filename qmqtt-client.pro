@@ -16,7 +16,8 @@ TEMPLATE = app
 
 #NOTICE: add DYLD_LIBRARY_PATH to build environment.
 INCLUDEPATH += ../src
-LIBS += -L../src -lqmqtt
+INCLUDEPATH += $$PREFIX/include
+LIBS += -L$$PREFIX/lib -lqmqtt
 
 SOURCES += main.cpp \
     mainwindow.cpp \
@@ -35,3 +36,11 @@ FORMS    += mainwindow.ui \
     connform.ui \
     pubform.ui \
     subform.ui
+
+target.path = $$PREFIX/bin
+desktop.files =qmqtt-client.desktop
+desktop.path = $$PREFIX/share/applications/
+icons.path = $$PREFIX/share/icons
+icons.files = qmqtt.png
+
+INSTALLS += target desktop icons
